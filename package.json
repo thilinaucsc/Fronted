@@ -1,0 +1,21 @@
+{
+  "name": "angular-node-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+	"type": "git",
+	"url": "git://github.com/username/repository.git"
+   },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thilina Sampath <thilinaucsc@gmail.com> (<thilinaucsc@gmail.com>)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "nodemon": "^1.10.0"
+  }
+}

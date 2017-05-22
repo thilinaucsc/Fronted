@@ -1,0 +1,60 @@
+
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a>Angular-Node View Site</a></h1>
+	              </div>
+	           </div>
+	           <div class="col-md-5">&nbsp;</div>
+	           <div class="col-md-2">
+	              <div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+	                      <li class="dropdown">	                     
+	                        <a class="dropdown-toggle" data-toggle="dropdown">
+	                        	My Account <span class="caret"></span>
+	                        </a>
+	                        <div class="dropdown-content">
+							    <a >View Profile</a>
+							    <a >Setting</a>
+							    <a ng-click="signOut()">Sign Out</a>
+						  	</div>
+	                        <!-- <ul class="dropdown-menu">
+	                          <li><a href="login.html">Logout</a></li>
+	                        </ul> -->	                     
+	                      </li>
+
+	                    </ul>
+	                  </nav>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li class="current"><a ui-sref="dashboard.view"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                    <li><a ui-sref="dashboard.calendar"><i class="glyphicon glyphicon-calendar"></i> Calendar</a></li>
+                    <li><a ui-sref="dashboard.tables"><i class="glyphicon glyphicon-list"></i> Tables</a></li>
+                    <li><a ui-sref="dashboard.forms"><i class="glyphicon glyphicon-tasks"></i> Forms</a></li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+
+		  	<!-- Nested View -->
+			<div class="row">  		    	
+				<div ui-view></div>		    	   
+			</div>    
+		  </div>
+		</div>
+    </div>

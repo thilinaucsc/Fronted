@@ -1,0 +1,53 @@
+
+<header > Boostrap Pagination Table </header>
+
+<!-- items being paged -->
+<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>Email</th>
+	      <th>First Name</th>
+	      <th>Gender</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+
+		<tr ng-repeat="row in items">
+	      <th scope="row">{{($index + pager.startIndex + 1)}}</th>
+	      <td>{{row.email}}</td>
+	      <td>{{row.first_name}}</td>
+	      <td>{{row.gender}}</td>
+	    </tr>
+
+	  </tbody>
+</table>
+
+
+
+<!-- Logind ......... -->
+<ul ng-if="items.length == 0">
+	<li> Loading ........... </li>
+</ul>
+
+<!-- Start Pagination -->
+<ul ng-if="items.length" class="pagination">     
+
+	<div > Showing {{pager.startIndex+1}} to {{pager.endIndex+1}} of {{totalRecord}} entries </div>
+
+    <li ng-class="{disabled:currentPage === 1}">
+        <a ng-click="setPage(1)">First</a>
+    </li>
+    <li ng-class="{disabled:pager.currentPage === 1}">
+        <a ng-click="setPage(pager.currentPage - 1)">Previous</a>
+    </li>
+    <li ng-repeat="page in pager.pages" ng-class="{active:pager.currentPage === page}">
+        <a ng-click="setPage(page)">{{page}}</a>
+    </li>                
+    <li ng-class="{disabled:pager.currentPage === pager.totalPages}">
+        <a ng-click="setPage(pager.currentPage + 1)">Next</a>
+    </li>
+    <li ng-class="{disabled:pager.currentPage === pager.totalPages}">
+        <a ng-click="setPage(pager.totalPages)">Last</a>
+    </li>
+</ul>

@@ -1,0 +1,52 @@
+<!Doctype html>
+<meta charset="UTF-8">
+<html lang="en">
+
+<head>
+<title>Angular Node Stock Ticker View</title>
+<!-- Bower Css -->
+<link rel="stylesheet" type="text/css"  href="libs/bootstrap/dist/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" type="text/css"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+<link rel="stylesheet" type="text/css" href="libs/angular-toastr/dist/angular-toastr.css" />
+
+<!-- Custom Css -->
+<link rel="stylesheet" type="text/css" href="css/buttons.css">
+<link rel="stylesheet" type="text/css" href="css/calendar.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body ng-app="loginDashboardApp" >
+
+<!-- Inject View Template Here-->
+<div ui-view></div>
+
+<!-- Bower Js  -->
+<script type="text/javascript"  src="libs/angular/angular.min.js"></script>
+<script type="text/javascript"  src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript"  src="libs/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script type="text/javascript"  src="libs/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script type="text/javascript"  src="libs/angular-cookies/angular-cookies.js"></script>
+
+<script type="text/javascript"  src="libs/chart.js/dist/Chart.min.js"></script>
+<script type="text/javascript"  src="libs/angular-chart.js/dist/angular-chart.min.js"></script>
+
+<!-- Custom Js -->
+<script src="js/app.js"></script>
+<script src="js/appRouteConfig.js"></script>
+
+<!-- Custom Controller -->
+<script src="js/controller/homeController.js"></script>
+<script src="js/controller/loginController.js"></script>
+<script src="js/controller/signupController.js"></script>
+<script src="js/controller/dashboardController.js"></script>
+<script src="js/controller/graphController.js"></script>
+<script src="js/controller/tableController.js"></script>
+
+<!-- Custom Service -->
+<script src="js/service/constantService.js"></script>
+<script src="js/service/userService.js"></script>
+<script src="js/service/dashboardService.js"></script>
+
+</body>
+</html>
